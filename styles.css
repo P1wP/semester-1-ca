@@ -1,4 +1,5 @@
- nav select{
+/* GLOBAL STYLES */
+nav select{
     display: block;
     color: green;
     list-style: none;
@@ -13,4 +14,22 @@
 .active{
     color:gold;
     background-color: black;
+}
+
+header{
+    background-color: lightblue;
+}
+
+
+/* MOBILE STYLES */
+@media only screen and (min-width : 300px) and (max-width : 775px){
+    
+    nav select{
+        float: right;
+    }
+    
+    #logo_nav{
+        float:left;
+        clear: both;
+    }
 }
