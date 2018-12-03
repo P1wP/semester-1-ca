@@ -1,1 +1,16 @@
-SOME TEXT
+ nav select{
+    display: block;
+    color: green;
+    list-style: none;
+    
+    
+    width: 40%;
+    padding: 5px 5px 5px 5px;
+    border: 1px solid black;
+}
+
+
+.active{
+    color:gold;
+    background-color: black;
+}
