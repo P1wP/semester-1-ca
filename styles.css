@@ -1,9 +1,17 @@
 /* GLOBAL STYLES */
+html{
+    width: 100%;
+    min-height: 100%;
+}
+
+body{
+    margin: 0 auto;
+}
+
 nav select{
     display: block;
     color: green;
     list-style: none;
-    
     
     width: 40%;
     padding: 5px 5px 5px 5px;
@@ -17,6 +25,7 @@ nav select{
 }
 
 header{
+    min-height: 50px;
     background-color: lightblue;
 }
 
@@ -24,8 +33,10 @@ header{
 /* MOBILE STYLES */
 @media only screen and (min-width : 300px) and (max-width : 775px){
     
+    
     nav select{
-        float: right;
+        float:right;
+        
     }
     
     #logo_nav{
