@@ -2,18 +2,34 @@
 html{
     width: 100%;
     min-height: 100%;
+   
+    
 }
 
 body{
+    width: 80%;
     margin: 0 auto;
+}
+
+#logo_nav{
+    margin: 0 .5em .5em .5em;
+    background-image: url(../logo_2.png);
+    background-repeat: no-repeat;
+    height: 60px;
+    
+   
+    
 }
 
 nav select{
     display: block;
-    color: green;
+    color: #fff;
+    background-color: black;
     list-style: none;
     
-    width: 40%;
+    width: 100%;
+    height: 50px;
+    border-radius: 3%;
     padding: 5px 5px 5px 5px;
     border: 1px solid black;
 }
@@ -26,7 +42,7 @@ nav select{
 
 header{
     min-height: 50px;
-    background-color: lightblue;
+    background-color: #94B0DA;
 }
 
 /* font and copy styles */
@@ -35,7 +51,11 @@ h1{
     margin:16px; /* standard fontsize*/
 }
 
-#intro_cms{
+section{
+    margin: 1em;
+}
+
+.img_show{
     margin: 1em;
 }
 
@@ -43,14 +63,8 @@ h1{
 /* MOBILE STYLES */
 @media only screen and (min-width : 300px) and (max-width : 775px){
     
-    
-    nav select{
-        float:right;
-        
-    }
-    
-    #logo_nav{
-        float:left;
-        clear: both;
-    }
+    body{
+        width: 100%;
+    } 
+  
 }
