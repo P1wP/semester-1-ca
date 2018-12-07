@@ -43,12 +43,40 @@
     
     
     <!-- image caruselle all the things -->
+    
     <div class="img_show">
         Add images. one image to reprisent each page.
         Images should be clickable with link to page. 
         images should change, timewise. and user should have option to go back or forth.
+        
+        <hr>
+        <hr>
+        <a href="pages/explore.html"><img class="slide_show" src="img/cosmonaut.jpg">Cosmology</a>
+        <a href="pages/explore.html"><img class="slide_show" src="img/mammoth.jpg"></a>
+        <a href="pages/explore.html"><img class="slide_show" src="img/people.jpg"></a>
+        <a href="pages/events.html"><img class="slide_show" src="img/premium_night.jpg"></a>
+        <hr>
+        <hr>
+        <!-- script to run slideshow. cite w3school.com-->
+        <script>
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                // define variable with class of img.
+                var x = document.getElementsByClassName("slide_show");
+                for (i = 0; i < x.length; i++) {
+                   x[i].style.display = "none";  
+                }
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}    
+                x[myIndex-1].style.display = "block";  
+                setTimeout(carousel, 2000); // Change image every 2 seconds
+            }
+        </script>
     </div>
-    
+   
     <div class="colums">
         <section class="kids">
             <a href="pages/explore.html"><h2>For Kids</h2></a>
@@ -75,9 +103,26 @@
         </section>
         
     </div>
-
     
-
-
+    <footer>
+        <div id="footer_col">
+            <div id="f_col_1">
+            </div>
+            
+            <div id="f_col_1">
+            </div>
+        
+            <div id="f_col_1">
+                <p>Social Media</p>
+                <a target="_blank" href="http://www.facebook.com"><img src="img/logo/FB.png"></a>
+                <a target="_blank" href="http://www.instagram.com"><img src="img/logo/insta.png"></a>
+                <a target="_blank" href="http://www.twitter.com"><img src="img/logo/twitter.png"></a>
+                <a target="_blank" href="http://www.snapchat.com"><img src="img/logo/snap.png"></a>
+            </div>
+        
+        </div>
+    
+    </footer>
+    
 </body>
 </html>
