@@ -90,25 +90,50 @@ section{
 
 footer{
     width: 100%;
-    height: 300px;
+    height: 230px;
     background-color: #343F3E;
 }
 
-#f_col_3 a{
-    margin-right: 1em;
+#f_col_1 ul{
+    list-style-type: none;
+    list-style: none;
+    display: block;
+    margin-left: 1em;
+    padding:0;
     
+    color: #fff;
+    
+}
+
+#f_col_2 ul{
+    list-style-type: none;
+    list-style: none;
+    display: block;
+    margin-right: 1em;
+    padding:0;
+    
+    color: #fff;
+    
+}
+
+#f_col_3 a{
+    margin-left: 1em;
+   
 }
 
 
 #f_col_3 p{
     color:#fff;
     text-transform: uppercase;
+    margin-left: 1em;
 }
 
-#f_col_3{
-    float:right;
-    clear: both;
-}
+/* flex to footer */
+#footer_col_narrow{
+        display:flex;
+        flex-flow: row wrap;
+    }
+
 
 /* MOBILE STYLES */
 @media only screen and (min-width : 300px) and (max-width : 775px){
@@ -124,6 +149,8 @@ footer{
             
     }
     
+    /* VISIT US/ OPEN HOURS */
+    
     .open_hour_col{
         display: flex;
         flex-direction: row;
@@ -133,6 +160,52 @@ footer{
     .hour_col_1{
         flex-direction: column;
         text-align: left;
+        
+    }
+    
+    .hour_col_2{
+        flex-direction: column;
+        margin-left: 2em;
+    }
+    
+
+    #f_col_1, #f_col_2{
+        flex: 1 50%;
+    }
+    #f_col_3{
+        flex:2;
+    }
+    
+  
+}
+
+/* MOBILE LANDSCAPE */
+
+@media only screen and (min-width : 755px) and (max-width : 850px){
+    
+    body{
+        width: 100%;
+    } 
+    
+    
+    .slide_show{
+        width: 100%;
+        height: 66.667%;
+            
+    }
+    
+    /* VISIT US/ OPEN HOURS */
+    
+    .open_hour_col{
+        display: flex;
+        flex-direction: row;
+            
+    }
+    
+    .hour_col_1{
+        flex-direction: column;
+        text-align: left;
+        
     }
     
     .hour_col_2{
@@ -140,6 +213,9 @@ footer{
         margin-left: 1em;
     }
     
+    #f_col_1, #f_col_2, #f_col_3{
+        flex: 1 33%;
+    }
   
   
 }
