@@ -11,12 +11,11 @@
 
 <body>
     <header>
-        <a href="index.html"><div id=logo_nav> </div></a>
-        <!-- Navigation menu mobile -->
         <nav>
+             <a href="index.html"><div id=logo_nav> </div></a>
             
-            
-            <select onchange="window.location.href=this.value">
+            <!-- Navigation menu mobile -->
+            <select id="mobile_nav" onchange="window.location.href=this.value">
                 <option value="index.html">--SELECT--</option>
                 <option value="index.html" class=active>Home</option>
                 <option value="pages/explore.html">Exhibitions</option>
@@ -24,54 +23,68 @@
                 <option value="pages/tickets.html">Tickets/Booking</option>
                 <option value="pages/visit.html">Visit</option>
                 <option value="pages/contact.html">Contact</option>
-                <option value="pages/involved.html">Get Involved</option>
-                
-                
+                <option value="pages/involved.html">Get Involved</option>  
             </select>
+            
+            <!-- Navigation menu desktop -->
+            <div id="desktop_nav">
+                <ul>
+                    <a href="pages/involved.html"><li>Get involved</li></a>
+                    <a href="pages/contact.html"><li>Contact</li></a>
+                    <a href="pages/tickets.html"><li>Booking</li></a>
+                    <a href="pages/visit.html"><li>Visit</li></a>
+                    <a href="pages/events.html"><li>Events</li></a>
+                    <a href="pages/explore.html"><li>exhibitions</li></a>
+                    <a href="index.html" class=active><li>home</li></a>
+                </ul>
+            </div>
+            
         </nav>
     </header>
         <!-- main copy/ introduction to website/the museum -->
    
     <article>
-        <section id=intro_cms>
-            <h2>Explore together</h2>
-            <p>Come join us at the Community Science Museum where we’re committed to making science accessible to all.
-            Over the course of human history, science has developed from our early understanding of fire, wind, water, and earth to exploring everything from galaxies far away to the very building blocks of life itself.
-            The aim of our museum is to create a space where everyone can experience the wonders of our discoveries and perhaps even ignite a lifelong passion to continue the exploration of the world around us.
-            We believe science should not be confined to the textbook, but brought to live through exhibits. This is why we have over 1000 different exhibits on the many varied subjects of science to explore. Many of these exhibits are designed for you to interact with and play around to see science come to life (apart from the dinosaur exhibits – they only come to life at night when everyone’s gone home).</p>
-        </section>
-        
-        <section id="open_hours">
-            <a href="pages/visit.html"><h2>Visit us</h2></a>
-            
-            <div class="open_hour_col">
-                
-                <div class="hour_col_1">
-                    <h3>Open </h3>
-                    <table>
-                       <tr> <th>Monday:</th> <td>Closed</td></tr> 
-                       <tr> <th>Tuesday:</th> <td> 10:00 – 16:00</td></tr> 
-                       <tr> <th>Wednesday:</th> <td> 10:00 – 16:00</td></tr>  
-                       <tr> <th>Thursday:</th> <td> 10:00 – 16:00</td></tr>  
-                       <tr> <th>Friday:</th> <td> 10:00 – 19:00</td></tr>  
-                       <tr> <th>Saturday:</th> <td> 09:00 – 16:00</td></tr>  
-                       <tr> <th>Sunday:</th> <td> 09:00 – 13:00</td></tr> 
-                    </table>
+        <div class="desktop_container_1">
+            <section id=intro_cms>
+                <h2>Explore together</h2>
+                <p>Come join us at the Community Science Museum where we’re committed to making science accessible to all.
+                Over the course of human history, science has developed from our early understanding of fire, wind, water, and earth to exploring everything from galaxies far away to the very building blocks of life itself.
+                The aim of our museum is to create a space where everyone can experience the wonders of our discoveries and perhaps even ignite a lifelong passion to continue the exploration of the world around us.
+                We believe science should not be confined to the textbook, but brought to live through exhibits. This is why we have over 1000 different exhibits on the many varied subjects of science to explore. Many of these exhibits are designed for you to interact with and play around to see science come to life (apart from the dinosaur exhibits – they only come to life at night when everyone’s gone home).</p>
+            </section>
+
+            <section id="open_hours">
+                <a href="pages/visit.html"><h2>Visit us</h2></a>
+
+                <div class="open_hour_col">
+
+                    <div class="hour_col_1">
+                        <h3>Open </h3>
+                        <table>
+                           <tr> <th>Monday:</th> <td>Closed</td></tr> 
+                           <tr> <th>Tuesday:</th> <td> 10:00 – 16:00</td></tr> 
+                           <tr> <th>Wednesday:</th> <td> 10:00 – 16:00</td></tr>  
+                           <tr> <th>Thursday:</th> <td> 10:00 – 16:00</td></tr>  
+                           <tr> <th>Friday:</th> <td> 10:00 – 19:00</td></tr>  
+                           <tr> <th>Saturday:</th> <td> 09:00 – 16:00</td></tr>  
+                           <tr> <th>Sunday:</th> <td> 09:00 – 13:00</td></tr> 
+                        </table>
+                    </div>
+
+                    <div class="hour_col_2">
+                        <h3>
+                            ADRESS:
+                        </h3>
+                        <p>
+                            Yellowbrick Road<br>
+                            Imagination Land<br>
+                            90120 OZ
+                        </p>
+                    </div>
+
                 </div>
-                
-                <div class="hour_col_2">
-                    <h3>
-                        ADRESS:
-                    </h3>
-                    <p>
-                        Yellowbrick Road<br>
-                        Imagination Land<br>
-                        90120 OZ
-                    </p>
-                </div>
-                
-            </div>
-        </section>
+            </section>
+        </div>
     </article>
     
     
