@@ -15,9 +15,9 @@ body{
    
     margin: 0 auto;
     background-color: #DDECF9;
+    box-shadow: 0 0 30px 0 rgba(52, 63, 62, 0.7);
        
 }
-
 
 
 /* navigation */
@@ -47,10 +47,19 @@ nav select{
     border-radius: 3%;
     padding: 5px 5px 5px 5px;
     border: 1px solid black;
+    
 }
 
 
 .active{
+    color:#E46525;
+}
+
+a:active{
+    color:#E46525;
+}
+
+ul a:hover{
     color:#E46525;
 }
 
@@ -76,8 +85,14 @@ header{
 /*------------- font and copy styles -----------*/
 
 h1{
-    margin:16px; /* standard fontsize*/
+    font-size:2em;
 }
+
+h2{
+    font-size: 1.5em;
+}
+
+
 
 section{
     margin: 1em;
@@ -101,6 +116,7 @@ section a{
     display:block;
     text-align: center;
     border-radius: 8px;
+    text-decoration: none;
 }
 
 .hour_col_2{
@@ -115,6 +131,50 @@ section a{
     width: 290px;
 }
 
+/* Contact Form styles */
+
+.snack_hide {
+  display: none;
+}
+
+#form_container *{
+    margin-left: 1em;
+}
+
+.contact_intern, .contact_volunteer, .contact_donation, .contact_tour, .contact_night, .contact_lecture{
+    width: 50%;
+}
+
+
+input[type= text], input[type= number], input[type= email], input[type= date]{
+    width: 100%;
+    height: 30px;
+    border: 1px solid #515b5b;
+    box-shadow: 0 0 10px 0 rgba(52, 63, 62, 0.5);
+    border-radius: 5px;
+    
+      
+}
+
+textarea{
+    width: 100%;
+    border: 1px solid #515b5b;
+    box-shadow: 0 0 10px 0 rgba(52, 63, 62, 0.5);
+    border-radius: 5px;
+    
+}
+
+button[type=submit]{
+    width: 100%;
+    height: 30px;
+    border: 1px solid #515b5b;
+    box-shadow: 0 0 10px 0 rgba(52, 63, 62, 0.5);
+    background-color: #E46525;
+    color: #DDECF9;
+    border-radius: 5px;
+    
+    
+}
 
 /* footer styles */
 
@@ -163,6 +223,10 @@ footer{
 
 /* MOBILE STYLES */
 @media only screen and (min-width : 300px) and (max-width : 775px){
+    
+    html{
+        background-image: none;
+    }
     
     body{
         width: 100%;
@@ -305,6 +369,7 @@ footer{
     
     body{
         width: 80%;
+        font-size: 1.5em;
     }
     
     /* hide show content */
@@ -328,9 +393,9 @@ footer{
         margin-left:0;
         margin-right: .5em;
         color:#fff;
-        
+        font-size: .9em;
         background-color: #343F3E;
-        padding: .5em;
+        padding: .3em;
         border-radius: 5px;
         
     }
@@ -343,6 +408,7 @@ footer{
         float:left;
         height: 60px;
         width: 199px;
+        margin-top: 20px;
     }
     
     #desktop_nav{
@@ -351,11 +417,33 @@ footer{
     
     nav{
         overflow: auto;
+        border-radius: 2px;
     }
     
     article{
         clear:both;
     }
+    
+    /* section top index.html */
+    
+    #intro_cms{
+        width: 60%;
+        margin-left: 2.5em;
+        padding-right: 1em;
+        border-right: 1px solid #343F3E;
+    }
+    #open_hours{
+        width: 40%;
+        margin-right: 2.5em;
+    }
+    
+    .hour_col_1 table th{
+        text-align: left;
+    }
+    .hour_col_1 table td{
+        text-align: right;
+    }
+    
     
     /* flex */
     .desktop_container_1{
@@ -363,5 +451,17 @@ footer{
         flex-direction: row;
     }
     
+    
+    #desktop_nav li:active{
+        color:#E46525;
+    }
+
+    a:hover{ 
+        color:#E46525;
+    }
+    
+    #desktop_nav li:hover{
+        color:#E46525;
+    }
     
 }
