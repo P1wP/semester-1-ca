@@ -16,12 +16,16 @@ body{
     margin: 0 auto;
     background-color: #DDECF9;
     box-shadow: 0 0 30px 0 rgba(52, 63, 62, 0.7);
+    font-family: 'Domine', serif;
        
 }
 
 
 /* navigation */
 
+nav{
+    font-family: 'Roboto', sans-serif;
+}
 
 #logo_nav{
     margin: 0 .5em .5em .5em;
@@ -49,6 +53,7 @@ nav select{
     border: 1px solid black;
     
 }
+
 
 
 .active{
@@ -137,9 +142,7 @@ section a{
   display: none;
 }
 
-#form_container *{
-    margin-left: 1em;
-}
+
 
 .contact_intern, .contact_volunteer, .contact_donation, .contact_tour, .contact_night, .contact_lecture{
     width: 50%;
@@ -152,8 +155,12 @@ input[type= text], input[type= number], input[type= email], input[type= date]{
     border: 1px solid #515b5b;
     box-shadow: 0 0 10px 0 rgba(52, 63, 62, 0.5);
     border-radius: 5px;
-    
+    margin-bottom: 1.5em;
       
+}
+
+input[type=radio], input[type=file]{
+    margin-bottom: 2em;
 }
 
 textarea{
@@ -172,6 +179,8 @@ button[type=submit]{
     background-color: #E46525;
     color: #DDECF9;
     border-radius: 5px;
+    margin-bottom: 2.5em;
+    margin-top: 2em;
     
     
 }
@@ -230,7 +239,7 @@ footer{
     
     body{
         width: 100%;
-        font-size: 1.5em;
+        font-size: 1em;
     } 
     
     
@@ -242,6 +251,15 @@ footer{
     
     #desktop_nav{
         display:none;
+    }
+    .contact_intern, .contact_volunteer, .contact_donation, .contact_tour, .contact_night, .contact_lecture{
+        width: 100%;
+        margin: 0;
+    }
+    
+    #form_container div form{
+        width: 90%;
+        margin-left: 5%;
     }
     
     /* VISIT US/ OPEN HOURS */
@@ -263,6 +281,11 @@ footer{
         flex-direction: column;
         margin-left: 2em;
         font-size: .7em;
+    }
+    
+    .hour_col_1_visit{
+        text-align: left;
+        margin-left:1em;
     }
     
     /* footer */
@@ -303,7 +326,7 @@ footer{
         display: block;
     }
     
-    #hide_btn{
+    #hide_btn, #hide_btn_2{
        background-color: #343F3E;
         color:#fff;
         display: block;
@@ -332,7 +355,12 @@ footer{
             
     }
     
+    /* show/ hide */
     #desktop_nav{
+        display:none;
+    }
+    
+    #hide_btn, #hide_btn_2{
         display:none;
     }
     /* VISIT US/ OPEN HOURS */
@@ -354,6 +382,9 @@ footer{
         margin-left: 1em;
     }
     
+    #form_container{
+        width: 100%;
+    }
     /* footer*/
     
     #f_col_1, #f_col_2, #f_col_3{
@@ -361,15 +392,80 @@ footer{
     }
     
     /*----explore.html -----*/
+     #open_hours_exhibition{
+        flex:1 100%;
+    }
+   
+    .open_hour_col_exhibition{
+        display: flex;
+        flex-flow: row wrap;
+       
+    }
+    .hour_col_1_exhibition, .hour_col_2_exhibition{
+        flex:1 0;
+        
+    }
+    
+    /* events */
+    #open_hours_event{
+        flex:1 100%;
+    }
+    
+    .open_hour_col_event{
+        display: flex;
+        flex-flow: row wrap;
+       
+    }
+    .hour_col_1_event, .hour_col_2_event{
+        flex:1 0;
+        
+    }
+    
+    /* VISIT */
+
+    
+    .visit_container{
+        display:flex;
+        flex-flow: row wrap;
+    }
+    
+    .visit_container h1{
+        width: 100%;
+    }
+    #visit_location, .hour_col_1_visit{
+        flex:auto;
+        text-align: left;
+    }
+    
+    /* INVOLVED */
+    
+    #involved_intern a{
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
   
-  
+     /* contact */
+    .contact_intern, .contact_volunteer, .contact_donation, .contact_tour, .contact_night, .contact_lecture{
+        width: 100%;
+        margin: 0;
+    }
+    
+    #form_container div form{
+        width: 90%;
+        margin-left: 5%;
+    }
+    
+
 }
 
+
+
+/*---------- DESKTOP -----------*/
 @media only screen and (min-width : 851px){
     
     body{
         width: 80%;
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
     
     /* hide show content */
@@ -378,7 +474,7 @@ footer{
         display:none;
     }
     
-    #hide_btn{
+    #hide_btn, #hide_btn_2{
         display:none;    
     }
     
@@ -392,12 +488,15 @@ footer{
         text-transform: uppercase;
         margin-left:0;
         margin-right: .5em;
-        color:#fff;
         font-size: .9em;
         background-color: #343F3E;
         padding: .3em;
         border-radius: 5px;
         
+    }
+    
+    ul li a{
+        color:#fff;
     }
     
     #desktop_nav a{
@@ -413,6 +512,7 @@ footer{
     
     #desktop_nav{
         float:right;
+    
     }
     
     nav{
@@ -427,31 +527,176 @@ footer{
     /* section top index.html */
     
     #intro_cms{
-        width: 60%;
-        margin-left: 2.5em;
+        max-width: 60%;
+        margin-left: 1em;
         padding-right: 1em;
         border-right: 1px solid #343F3E;
     }
-    #open_hours{
-        width: 40%;
-        margin-right: 2.5em;
+    #open_hours, #open_hours_event, open_hours_exhibition{
+        margin-right: 1em;
+        
     }
     
-    .hour_col_1 table th{
+    .hour_col_1 table th, .hour_col_1_event table th, .hour_col_1_exhibition table th {
         text-align: left;
     }
-    .hour_col_1 table td{
-        text-align: right;
+    
+    .hour_col_1 table td, .hour_col_1_event table td, ..hour_col_1_exhibition table td{
+        text-align: right;  
+    }
+    
+    .hour_col_1 table{
+        width: 300px;
+    }
+    
+    /*  Sections INDEX.html */
+    hr{
+        display:none;
     }
     
     
-    /* flex */
+    /* -----flex----- */
     .desktop_container_1{
         display: flex;
         flex-direction: row;
     }
+      #f_col_1, #f_col_2, #f_col_3{
+        flex: 1;
+    }
+    
+    /* Index */
+    .colums{
+        display: flex;
+        flex-flow: row wrap;
+    }
+    
+    .teachers, .research{
+        width: 50%;
+    }
+    .teachers, .research{
+        flex: 1 40%;
+    }
+    
+    /*explore*/
+    .explore_container{
+        display:flex;
+        flex-flow: row wrap;
+    }
+    
+    .explore_conteiner h1{
+        width: 100%;
+    }
+    
+    #exhibition_space{
+        flex-direction: row;
+    }
+    
+    #exhibition_evolution, #exhibition_biology{
+        flex: 1 40%;
+    }
+    
+    #exhibition_robot, #exhibition_ecology{
+        flex:2 40%;
+    }
+    
+    #open_hours_exhibition{
+        flex:1 100%;
+    }
+   
+    .open_hour_col_exhibition{
+        display: flex;
+        flex-flow: row wrap;
+       
+    }
+    .hour_col_1_exhibition, .hour_col_2_exhibition{
+        flex:1 0;
+        
+    }
     
     
+    
+    /* events */
+    .event_container{
+        display:flex;
+        flex-flow: row wrap;
+    }
+    .event_container h1{
+        width: 100%;
+    }
+    
+    #events_lecture, #events_night, #events_loan{
+        flex: 1 20%;
+    }
+    
+    #open_hours_event{
+        flex:1 100%;
+    }
+    
+    .open_hour_col_event{
+        display: flex;
+        flex-flow: row wrap;
+       
+    }
+    .hour_col_1_event, .hour_col_2_event{
+        flex:1 0;
+        
+    }
+    
+    /* visit */
+    
+    .visit_container{
+        display:flex;
+        flex-flow: row wrap;
+    }
+    
+    .visit_container h1{
+        width: 100%;
+    }
+    #visit_location, .hour_col_1_visit{
+        flex:auto;
+        text-align: left;
+    }
+    #visit_access{
+        flex:1 100%;
+    }
+    
+    #visit_admission, #visit_food{
+        flex:2 1;
+    }
+    
+    
+    
+    /* Involved */
+    
+    .involved_container{
+        display:flex;
+        flex-flow: row wrap;
+    }
+    
+    #involved_volunteer, #involved_intern{
+        width: 50%;
+        flex: 1 40%;
+    }
+    
+    #involved_intern a{
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+    
+    
+    /* contact */
+    .contact_intern, .contact_volunteer, .contact_donation, .contact_tour, .contact_night, .contact_lecture{
+        width: 100%;
+        margin: 0;
+    }
+    
+    #form_container div form{
+        width: 90%;
+        margin-left: 5%;
+    }
+    
+    
+    /* ---- PSUDO ---- */
     #desktop_nav li:active{
         color:#E46525;
     }
@@ -464,4 +709,7 @@ footer{
         color:#E46525;
     }
     
+    #form_container button:hover{
+        background-color: #343F3E;
+    }
 }
