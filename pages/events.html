@@ -11,19 +11,40 @@
 
 <body>
     <header>
-        <a href="../index.html"><div id=logo_nav> </div></a>
-        <!-- Navigation menu mobile -->
-        <nav>
-            <select onchange="window.location.href=this.value">
-                <option value="explore.html">--SELECT--</option>
-                <option value="../index.html" >Home</option>
-                <option value="explore.html" >Exhibitions</option>
+         <nav>
+             <a href="index.html"><div id=logo_nav> </div></a>
+            
+            <!-- Navigation menu mobile -->
+            <select id="mobile_nav" onchange="window.location.href=this.value">
+                <option value="events.html">--SELECT--</option>
+                <option value="../index.html">Home</option>
+                <option value="explore.html">Exhibitions</option>
                 <option value="events.html" class=active>Events</option>
+                <!--<option value="tickets.html">Tickets/Booking</option>-->
                 <option value="visit.html">Visit</option>
-                <option value="tickets.html">Tickets/Booking</option>
                 <option value="contact.html">Contact</option>
                 <option value="involved.html">Get Involved</option>  
             </select>
+            
+            <!-- Navigation menu desktop -->
+            <div id="desktop_nav">
+                <ul>
+                    <a href="../index.html"><li>home</li></a>
+                    <a href="explore.html"><li>exhibitions</li></a>
+                    <a href="events.html" class=active><li>Events</li></a>
+                    <a href="visit.html"><li>Visit</li></a>
+                    <a href="involved.html"><li>Get involved</li></a>
+                    <a href="contact.html"><li>Contact</li></a>
+                    
+                    
+                    <!--<a href="tickets.html"><li>Booking</li></a>-->
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+            
         </nav>
     </header>
    
@@ -55,26 +76,6 @@
             
                ----- image!! -----      
         </section>
-        
-        <section id=exhibition>
-            <h2>Robotics and AI</h2>
-                <p>
-                    The information revolution is here and robotics and artificial intelligence are the science of the future. From useful home applications of AI to industrial uses of robotics, the future is here. You can even say hello and shake the hand of Rob the Robot.
-                </p>
-            
-               ----- Robotics and AI image!! ----       
-        </section>
-        
-        <section id=exhibition>
-            <h2>Ecology</h2>
-                <p>
-                    As we learn more and more of the impact humans are having on the planet, the more important it becomes that scientists explore how to create a sustainable future not just for humans but for the whole planet.
-                    In our ecology section of the museum, we unpack the dangers we currently face including global warming, extinction of species, and pollution. But we also focus on the positive ways we can all contribute to a brighter future.
-                </p>
-            
-               ----- Ecology image!! -----
-        </section>
-        
         
         <section id="open_hours">
             <a href="pages/visit.html"><h2>Visit us</h2></a>
@@ -113,17 +114,17 @@
         <div id="footer_col">
             <div id="f_col_1">
                 <ul>
-                    <a href="index.html"><li>HOME</li></a>
-                    <a href="pages/explore/"><li>Exhibition</li></a>
-                    <a href="pages/events.html"><li>EVENTS</li></a>
+                    <a href="../index.html"><li>HOME</li></a>
+                    <a href="explore/"><li>Exhibition</li></a>
+                    <a href="events.html"><li>EVENTS</li></a>
                 </ul>
             </div>
 
             <div id="f_col_2">
                 <ul>
-                    <a href="pages/contact.html"><li>CONTACT</li></a>
-                    <a href="pages/tickets.html"><li>TICKETS/BOOKING</li></a>
-                    <a href="pages/visit.html"><li>VISIT</li></a>
+                    <a href="contact.html"><li>CONTACT</li></a>
+                    <!--<a href="tickets.html"><li>TICKETS/BOOKING</li></a>-->
+                    <a href="visit.html"><li>VISIT</li></a>
                 </ul>
             </div>
 

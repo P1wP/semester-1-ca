@@ -6,24 +6,45 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
 <link rel=stylesheet href="../styles.css" type="text/css">
-	<title> CSM - Home - </title>
+	<title> CSM - Exhibitions - </title>
 </head>
 
 <body>
     <header>
-        <a href="../index.html"><div id=logo_nav> </div></a>
-        <!-- Navigation menu mobile -->
-        <nav>
-            <select onchange="window.location.href=this.value">
+         <nav>
+             <a href="index.html"><div id=logo_nav> </div></a>
+            
+            <!-- Navigation menu mobile -->
+            <select id="mobile_nav" onchange="window.location.href=this.value">
                 <option value="explore.html">--SELECT--</option>
-                <option value="../index.html" >Home</option>
+                <option value="../index.html">Home</option>
                 <option value="explore.html" class=active>Exhibitions</option>
                 <option value="events.html">Events</option>
+                <!--<option value="tickets.html">Tickets/Booking</option>-->
                 <option value="visit.html">Visit</option>
-                <option value="tickets.html">Tickets/Booking</option>
                 <option value="contact.html">Contact</option>
                 <option value="involved.html">Get Involved</option>  
             </select>
+            
+            <!-- Navigation menu desktop -->
+            <div id="desktop_nav">
+                <ul>
+                    <a href="../index.html"><li>home</li></a>
+                    <a href="explore.html" class=active><li>exhibitions</li></a>
+                    <a href="events.html"><li>Events</li></a>
+                    <a href="visit.html"><li>Visit</li></a>
+                    <a href="involved.html"><li>Get involved</li></a>
+                    <a href="contact.html"><li>Contact</li></a>
+                    
+                    
+                    <!--<a href="tickets.html"><li>Booking</li></a>-->
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+            
         </nav>
     </header>
    
@@ -118,17 +139,17 @@
         <div id="footer_col">
             <div id="f_col_1">
                 <ul>
-                    <a href="index.html"><li>HOME</li></a>
-                    <a href="pages/explore/"><li>Exhibition</li></a>
-                    <a href="pages/events.html"><li>EVENTS</li></a>
+                    <a href="../index.html"><li>HOME</li></a>
+                    <a href="explore/"><li>Exhibition</li></a>
+                    <a href="events.html"><li>EVENTS</li></a>
                 </ul>
             </div>
 
             <div id="f_col_2">
                 <ul>
-                    <a href="pages/contact.html"><li>CONTACT</li></a>
-                    <a href="pages/tickets.html"><li>TICKETS/BOOKING</li></a>
-                    <a href="pages/visit.html"><li>VISIT</li></a>
+                    <a href="contact.html"><li>CONTACT</li></a>
+                    <!--<a href="tickets.html"><li>TICKETS/BOOKING</li></a>-->
+                    <a href="visit.html"><li>VISIT</li></a>
                 </ul>
             </div>
 
@@ -140,13 +161,7 @@
                 <a target="_blank" href="http://www.snapchat.com"><img src="../img/logo/snap.png" alt="Snapchat Icon"></a>
             </div>
             
-            <div id="f_col_4">
-                <p>
-                    Yellowbrick Road<br>
-                    Imagination Land<br>
-                    90120 OZ
-                </p>
-            </div>
+            
         </div>
     </footer>
     
